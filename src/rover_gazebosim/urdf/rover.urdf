@@ -1,0 +1,885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="rover_gazebosim">
+  <link
+    name="body">
+    <inertial>
+      <origin
+        xyz="0.113786796564404 0.210384838000589 -0.0515736103548764"
+        rpy="0 0 0" />
+      <mass
+        value="11.151373897445" />
+      <inertia
+        ixx="0.194163171939644"
+        ixy="9.7428792693228E-18"
+        ixz="1.60735826972413E-17"
+        iyy="0.0754852490416872"
+        iyz="0.000332799994502401"
+        izz="0.244153010760226" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/body.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/body.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="lf">
+    <inertial>
+      <origin
+        xyz="0.00670884200432043 0.0342541979478499 0.00101544789727115"
+        rpy="0 0 0" />
+      <mass
+        value="0.109939448590777" />
+      <inertia
+        ixx="9.39389980696909E-05"
+        ixy="9.99024686964962E-07"
+        ixz="1.83827439379185E-05"
+        iyy="0.000126169030112145"
+        iyz="-1.17698408701748E-06"
+        izz="0.000114820764088305" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="revolute">
+    <origin
+      xyz="0.028418 0.305 -0.0887"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="lf" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="lft">
+    <inertial>
+      <origin
+        xyz="0.0249546351051042 -0.0265951672077813 -0.0611042640329306"
+        rpy="0 0 0" />
+      <mass
+        value="0.214968868775256" />
+      <inertia
+        ixx="0.000553438869008273"
+        ixy="-1.65313928690804E-06"
+        ixz="-3.81921876719966E-06"
+        iyy="0.000472387692450724"
+        iyz="-0.000185459644548603"
+        izz="0.000125008740988362" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j12"
+    type="revolute">
+    <origin
+      xyz="-0.030376 0.033595 -0.027163"
+      rpy="0 0 0" />
+    <parent
+      link="lf" />
+    <child
+      link="lft" />
+    <axis
+      xyz="-0.99996 0 0.0089134" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="lfc">
+    <inertial>
+      <origin
+        xyz="-0.0292186212615104 0.0490977223371922 -0.0580543027687059"
+        rpy="0 0 0" />
+      <mass
+        value="0.222303065519725" />
+      <inertia
+        ixx="0.000511641589017345"
+        ixy="1.996880463663E-06"
+        ixz="-1.99585563630291E-06"
+        iyy="0.000365182486857749"
+        iyz="0.000224022708751582"
+        izz="0.000287751642436189" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lfc.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lfc.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j13"
+    type="revolute">
+    <origin
+      xyz="0.056793 -0.053485 -0.12428"
+      rpy="0 0 0" />
+    <parent
+      link="lft" />
+    <child
+      link="lfc" />
+    <axis
+      xyz="0.99996 0 -0.0089134" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rf">
+    <inertial>
+      <origin
+        xyz="-0.00633865104283948 0.0342291979477745 0.00242095114205709"
+        rpy="0 0 0" />
+      <mass
+        value="0.109939448590778" />
+      <inertia
+        ixx="8.72356406340229E-05"
+        ixy="-1.22677409895047E-06"
+        ixz="-1.23698153691151E-05"
+        iyy="0.000126169030112146"
+        iyz="-9.37212449982516E-07"
+        izz="0.000121524121523972" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="revolute">
+    <origin
+      xyz="0.19876 0.30502 -0.0875"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="rf" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rft">
+    <inertial>
+      <origin
+        xyz="-0.0373233578683926 -0.0273933610198274 -0.0540401763848489"
+        rpy="0 0 0" />
+      <mass
+        value="0.214968868775256" />
+      <inertia
+        ixx="0.000535801218761615"
+        ixy="-3.88031776575497E-05"
+        ixz="-8.4692121806799E-05"
+        iyy="0.000467450702036031"
+        iyz="-0.000185965391353131"
+        izz="0.000147583381649704" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rft.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rft.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j22"
+    type="revolute">
+    <origin
+      xyz="0.023894 0.03357 -0.03301"
+      rpy="0 0 0" />
+    <parent
+      link="rf" />
+    <child
+      link="rft" />
+    <axis
+      xyz="0.97892 0 -0.20426" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rfc">
+    <inertial>
+      <origin
+        xyz="0.0227839827278775 0.0716580268119713 -0.0313150815339128"
+        rpy="0 0 0" />
+      <mass
+        value="0.222303065519726" />
+      <inertia
+        ixx="0.000511210915176803"
+        ixy="2.97798988949999E-05"
+        ixz="-2.14927898202122E-06"
+        iyy="0.000152005907483818"
+        iyz="0.000142721057572667"
+        izz="0.000501358895650669" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rfc.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rfc.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j23"
+    type="revolute">
+    <origin
+      xyz="-0.082726 -0.055033 -0.10959"
+      rpy="0 0 0" />
+    <parent
+      link="rft" />
+    <child
+      link="rfc" />
+    <axis
+      xyz="0.97892 0 -0.20426" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rb">
+    <inertial>
+      <origin
+        xyz="-0.00662232922928152 0.0444542043625005 0.00112191050349619"
+        rpy="0 0 0" />
+      <mass
+        value="0.109939448590778" />
+      <inertia
+        ixx="9.44550211019587E-05"
+        ixy="-9.82536274128306E-07"
+        ixz="-1.86663994154545E-05"
+        iyy="0.000126169030112145"
+        iyz="-1.19078307692047E-06"
+        izz="0.000114304741056036" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.627450980392157 0.627450980392157 0.627450980392157 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j3"
+    type="revolute">
+    <origin
+      xyz="0.19876 0.045 -0.0877"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="rb" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rbt">
+    <inertial>
+      <origin
+        xyz="-0.0242422792739249 -0.0376990677299545 -0.0552708001608133"
+        rpy="0 0 0" />
+      <mass
+        value="0.214968868775255" />
+      <inertia
+        ixx="0.000553292135114359"
+        ixy="5.41171406291674E-06"
+        ixz="7.91333849861869E-06"
+        iyy="0.000390468192961197"
+        iyz="-0.000236892001227658"
+        izz="0.000207074974371801" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rbt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rbt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j32"
+    type="revolute">
+    <origin
+      xyz="0.030851 0.043795 -0.026538"
+      rpy="0 0 0" />
+    <parent
+      link="rb" />
+    <child
+      link="rbt" />
+    <axis
+      xyz="0.99974 0 0.022839" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rbc">
+    <inertial>
+      <origin
+        xyz="0.0297150919921361 0.0616943451637069 -0.0441071139189825"
+        rpy="0 0 0" />
+      <mass
+        value="0.222303065519725" />
+      <inertia
+        ixx="0.000511599541559762"
+        ixy="-4.93664302851959E-06"
+        ixz="2.61934444605325E-06"
+        iyy="0.000255975801811284"
+        iyz="0.000216096274263026"
+        izz="0.00039700037494024" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rbc.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rbc.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j33"
+    type="revolute">
+    <origin
+      xyz="-0.056015 -0.076195 -0.11375"
+      rpy="0 0 0" />
+    <parent
+      link="rbt" />
+    <child
+      link="rbc" />
+    <axis
+      xyz="-0.99974 0 -0.022839" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="lb">
+    <inertial>
+      <origin
+        xyz="0.00667026139954352 -0.0209458020522575 0.00124390574943112"
+        rpy="0 0 0" />
+      <mass
+        value="0.109939448590777" />
+      <inertia
+        ixx="9.27087699208611E-05"
+        ixy="1.03862858962795E-06"
+        ixz="1.76273218906206E-05"
+        iyy="0.000126169030112145"
+        iyz="-1.14218760239494E-06"
+        izz="0.000116050992237133" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j4"
+    type="revolute">
+    <origin
+      xyz="0.028418 0.1104 -0.0885"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="lb" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="lbt">
+    <inertial>
+      <origin
+        xyz="0.0269012377270597 -0.0358698225135401 -0.0552580202863181"
+        rpy="0 0 0" />
+      <mass
+        value="0.214968868775255" />
+      <inertia
+        ixx="0.000553242383170547"
+        ixy="5.81314181584074E-06"
+        ixz="9.13276082781338E-06"
+        iyy="0.000405927796826689"
+        iyz="-0.00023029618682678"
+        izz="0.000191665122450116" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lbt.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lbt.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j42"
+    type="revolute">
+    <origin
+      xyz="-0.029431 -0.021605 -0.028185"
+      rpy="0 0 0" />
+    <parent
+      link="lb" />
+    <child
+      link="lbt" />
+    <axis
+      xyz="-0.99968 0 -0.025234" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="lbc">
+    <inertial>
+      <origin
+        xyz="-0.0378553071358961 0.0616240210136068 -0.0458408372004173"
+        rpy="0 0 0" />
+      <mass
+        value="0.222303065519725" />
+      <inertia
+        ixx="0.000511585899803618"
+        ixy="-5.45994658498779E-06"
+        ixz="2.91100884864983E-06"
+        iyy="0.000256654347930465"
+        iyz="0.000216303836829514"
+        izz="0.0003963354705772" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lbc.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/lbc.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j43"
+    type="revolute">
+    <origin
+      xyz="0.071048 -0.072349 -0.11202"
+      rpy="0 0 0" />
+    <parent
+      link="lbt" />
+    <child
+      link="lbc" />
+    <axis
+      xyz="0.99968 0 0.025234" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+  <link
+    name="rgbd">
+    <inertial>
+      <origin
+        xyz="0.0519757991577148 0.000553862591645693 -0.0117174770516906"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436947873204671" />
+      <inertia
+        ixx="5.44455523267729E-06"
+        ixy="-7.27236303772772E-07"
+        ixz="-3.90051316736406E-06"
+        iyy="7.36824114503765E-05"
+        iyz="-4.15645043632964E-08"
+        izz="7.42538677078591E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rgbd.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://rover_gazebosim/meshes/rgbd.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j5"
+    type="revolute">
+    <origin
+      xyz="0.11325 0.30476 0.0856"
+      rpy="0 0 0" />
+    <parent
+      link="body" />
+    <child
+      link="rgbd" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.15"
+      upper="3.15"
+      effort="100"
+      velocity="2" />
+  </joint>
+
+<!-- ros2_control hardware interface — 12 leg joints only, not camera -->
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>ign_ros2_control/IgnitionSystem</plugin>
+    </hardware>
+
+    <!-- Left Front -->
+    <joint name="j1">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j12">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j13">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Right Front -->
+    <joint name="j2">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j22">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j23">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Right Back -->
+    <joint name="j3">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j32">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j33">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+
+    <!-- Left Back -->
+    <joint name="j4">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j42">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+    <joint name="j43">
+      <command_interface name="position"/>
+      <state_interface name="position"/>
+      <state_interface name="velocity"/>
+    </joint>
+  </ros2_control>
+
+  <!-- Gazebo Fortress plugin — loads controller_manager inside Gazebo -->
+  <gazebo>
+    <plugin filename="libign_ros2_control-system.so"
+            name="ign_ros2_control::IgnitionROS2ControlPlugin">
+      <parameters>package://rover_gazebosim/config/controllers.yaml</parameters>
+    </plugin>
+  </gazebo>
+
+</robot>
